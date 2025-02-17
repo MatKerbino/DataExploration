@@ -75,4 +75,20 @@
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     ```
+
+- **Scipy**: Biblioteca para computação científica.
+  - **O que é:** Scipy é uma biblioteca de Python que fornece funções e algoritmos para matemática, ciência e engenharia, construindo sobre a biblioteca NumPy.
+  - **Funcionalidades:** Inclui módulos para otimização, integração, interpolação, álgebra linear, estatísticas e muito mais.
+  - **Exemplo de uso:** Para calcular a integral de uma função, você pode usar:
+    ```python
+    from scipy.integrate import quad
+    result, error = quad(lambda x: x**2, 0, 1)  # Integra x^2 de 0 a 1.
+    ```
+    
+  - **Exemplo de uso com distribuição normal:** Para trabalhar com distribuições normais, você pode usar:
+    ```python
+    from scipy.stats import norm
+    distribution = norm(loc=0, scale=1)  # Cria uma distribuição normal padrão.
+    ```
+
  

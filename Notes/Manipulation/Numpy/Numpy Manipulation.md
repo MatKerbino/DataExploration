@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 ### np.random.seed()
 - **O que faz:** Define a semente para o gerador de números aleatórios, garantindo que os resultados sejam reproduzíveis em execuções subsequentes.
@@ -27,4 +27,19 @@ import numpy as np
   ```python
   import numpy as np
   sample = np.random.choice([1, 2, 3, 4, 5], size=3, replace=False)  # Seleciona 3 números sem reposição.
+  ```
+
+## numpy.random.randint()
+- **O que faz:** Gera números inteiros aleatórios em um intervalo especificado.
+- **Detalhes:** Você pode definir o intervalo inferior (inclusivo) e o superior (exclusivo) para os números gerados, além de especificar a quantidade de números a serem gerados.
+- **Exemplo Analógico:** Imagine que você está sorteando números de uma caixa que contém números inteiros de 0 a 9; `randint` permite que você faça isso de forma controlada.
+- **Parâmetros:**
+  - `low`: O limite inferior (inclusivo) do intervalo.
+  - `high`: O limite superior (exclusivo) do intervalo.
+  - `size`: O número de inteiros a serem gerados (opcional).
+- **Retorno:** Retorna um ou mais números inteiros aleatórios, dependendo do parâmetro `size`.
+- **Exemplo de uso:**
+  ```python
+  import numpy as np
+  random_numbers = np.random.randint(0, 10, size=5)  # Gera 5 números inteiros aleatórios entre 0 e 9.
   ```
