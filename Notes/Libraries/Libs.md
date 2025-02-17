@@ -91,4 +91,18 @@
     distribution = norm(loc=0, scale=1)  # Cria uma distribuição normal padrão.
     ```
 
+- **Statsmodels**: Análise estatística em Python.
+  - **O que é:** `statsmodels` é uma biblioteca em Python que fornece classes e funções para a estimativa de modelos estatísticos, realização de testes estatísticos e exploração de dados. É amplamente utilizada para análise estatística e econometria.
+  - **Detalhes:** A biblioteca oferece uma ampla gama de ferramentas para modelagem estatística, incluindo regressão linear e não linear, modelos de séries temporais, ANOVA, testes de hipóteses e muito mais. Ela permite que os usuários realizem análises estatísticas de forma eficiente e intuitiva.
+  - **Funcionalidades:** Inclui suporte para modelos de regressão, análise de variância (ANOVA), testes de hipóteses, e comparações múltiplas. A biblioteca também fornece resumos estatísticos detalhados e visualizações para facilitar a interpretação dos resultados.
+  - **Exemplo de uso:**
+    ```python
+    import statsmodels.api as sm
+    from statsmodels.formula.api import ols
+
+    # Ajustando um modelo de regressão linear
+    model = ols('y ~ x1 + x2', data=df).fit()
+    print(model.summary())  # Exibe um resumo do modelo ajustado.
+    ```
+
  

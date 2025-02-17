@@ -9,6 +9,36 @@
   mean = stats.norm.mean(loc=0, scale=1)  # Calcula a média da distribuição normal padrão.
   ```
 
+### stats.cdf()
+- **O que faz:** Calcula a função de distribuição acumulada (CDF) para uma distribuição específica.
+- **Detalhes:** A CDF fornece a probabilidade de que uma variável aleatória seja menor ou igual a um determinado valor. É uma ferramenta importante para entender a distribuição de dados.
+- **Exemplo Analógico:** Imagine que você está avaliando a probabilidade de um aluno obter uma nota menor ou igual a 70 em um teste; a CDF ajuda a determinar essa probabilidade.
+- **Parâmetros:** 
+  - `x`: O valor para o qual a CDF deve ser calculada.
+  - `loc`: A média da distribuição (opcional).
+  - `scale`: O desvio padrão da distribuição (opcional).
+- **Retorno:** Retorna a probabilidade acumulada até o valor `x`.
+- **Exemplo de uso:**
+  ```python
+  from scipy.stats import norm
+  probability = norm.cdf(70, loc=65, scale=10)  # Calcula a probabilidade de ser menor ou igual a 70.
+  ```
+
+### stats.sf()
+- **O que faz:** Calcula a função de sobrevivência (SF) para uma distribuição específica.
+- **Detalhes:** A SF fornece a probabilidade de que uma variável aleatória seja maior do que um determinado valor. É o complemento da CDF.
+- **Exemplo Analógico:** Imagine que você está avaliando a probabilidade de um aluno obter uma nota maior que 70 em um teste; a SF ajuda a determinar essa probabilidade.
+- **Parâmetros:** 
+  - `x`: O valor para o qual a SF deve ser calculada.
+  - `loc`: A média da distribuição (opcional).
+  - `scale`: O desvio padrão da distribuição (opcional).
+- **Retorno:** Retorna a probabilidade de ser maior que o valor `x`.
+- **Exemplo de uso:**
+  ```python
+  from scipy.stats import norm
+  probability = norm.sf(70, loc=65, scale=10)  # Calcula a probabilidade de ser maior que 70.
+  ```
+
 ### scipy.stats.shapiro()
 - **O que faz:** Realiza o teste de Shapiro-Wilk para verificar a normalidade de um conjunto de dados.
 - **Detalhes:** O teste de Shapiro-Wilk avalia se uma amostra de dados é proveniente de uma distribuição normal. Um valor de p menor que um nível de significância (geralmente 0.05) indica que a hipótese nula de normalidade pode ser rejeitada.
