@@ -28,3 +28,8 @@
 - **Explicação:**  
   A rede neural possui duas camadas ocultas (com 64 e 32 unidades, respectivamente) e uma camada de saída com 2 nós para classificação. A função softmax no final normaliza as previsões para que possam ser interpretadas como probabilidades.
 
+  - **Treinamento:**  
+  Utiliza-se o otimizador Adam e a função de perda CrossEntropy para atualizar os pesos da rede ao longo de 20 épocas.
+- **Avaliação:**  
+  Após o treinamento, o desempenho é medido pela acurácia no conjunto de teste, comparando as predições com os valores reais.
+
